@@ -1,10 +1,4 @@
 ﻿// ConsoleApplication1.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
-//
-
-#include <iostream>
-#include <iomanip>
-#include <fstream>
-using namespace std;
 
 #include <iostream>
 #include<fstream>
@@ -12,22 +6,19 @@ using namespace std;
 int main()
 {
 	ifstream cin("input.txt"); //把输入流定位到aaa.txt文件
-	int data[100][100]; //你的数组
-	int num = 0;
-	int x, y;
-	char h;
-	cin >> x >> h;
-	cin >> y >> h;
-
-	for (int i = 0; i < x; i++) {
-		for (int j = 0; j < y; j++) {
-			cin >> data[i][j] >> h;
-			cout << data[i][j] << endl;
-		}
+	double nums[1000]; //你的数组
+	int m, n;//行列
+	cin >> m >> n;
+	for (int i = 0; i < n; i++) {
+		cin >> nums[i];
 	}
-	
+	int pre = 0, maxAns = nums[0];
+	for (const auto& x : nums) {
+		pre = max(pre + x, x);
+		maxAns = max(maxAns, pre);
+	}
+	cout <<"最大子数组的和为"<< maxAns;
 }
-
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
 // 调试程序: F5 或调试 >“开始调试”菜单
 

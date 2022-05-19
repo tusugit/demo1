@@ -1,2 +1,8 @@
 ﻿  ConsoleApplication1.cpp
+C:\Users\14712\source\repos\demo1\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(17,22): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+C:\Users\14712\source\repos\demo1\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(19,12): warning C4244: “=”: 从“const _Ty”转换到“int”，可能丢失数据
+          with
+          [
+              _Ty=double
+          ]
   ConsoleApplication1.vcxproj -> C:\Users\14712\source\repos\demo1\ConsoleApplication1\Debug\ConsoleApplication1.exe
